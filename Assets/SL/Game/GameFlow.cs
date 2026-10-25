@@ -27,7 +27,7 @@ namespace SL.Game
             if (I != null) return;
             Application.runInBackground = true;
             bool server = Application.isBatchMode;
-            string[] args = Application.GetCommandLineArgs();
+            string[] args = Environment.GetCommandLineArgs();
             for (int i = 0; i < args.Length; i++) if (args[i] == "-sl-server") server = true;
             if (server)
             {
